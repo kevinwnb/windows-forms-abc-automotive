@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Model.Instructor">
+    <Position X="8.75" Y="1" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAQAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Instructor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Loan">
+    <Position X="5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAkACAAA=</HashCode>
+      <FileName>Entities\Loan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Ressource">
+    <Position X="0.5" Y="1" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAEAAAAgGAAAAAAAIAAAAAAAAIAAQAAAAACAAA=</HashCode>
+      <FileName>Entities\Ressource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Entities.Program">
+    <Position X="8.75" Y="2.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAgAAAAAAAAAQgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Student">
+    <Position X="5" Y="2.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAEAAAAgAAAAAAAAAAAAAAAAAAIAAAQEAAAAAg=</HashCode>
+      <FileName>Entities\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

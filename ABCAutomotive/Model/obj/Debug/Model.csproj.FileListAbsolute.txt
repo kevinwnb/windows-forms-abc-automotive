@@ -1,0 +1,16 @@
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - E2\Model\bin\Debug\Model.dll
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - E2\Model\bin\Debug\Model.pdb
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - E2\Model\bin\Debug\Types.dll
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - E2\Model\bin\Debug\Types.pdb
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - E2\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - E2\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - E2\Model\obj\Debug\Model.dll
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - E2\Model\obj\Debug\Model.pdb
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Model\bin\Debug\Model.dll
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Model\bin\Debug\Model.pdb
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Model\bin\Debug\Types.dll
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Model\bin\Debug\Types.pdb
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Model\obj\Debug\Model.dll
+C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Model\obj\Debug\Model.pdb
