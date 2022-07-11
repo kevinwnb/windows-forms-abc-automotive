@@ -51,7 +51,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 523);
+            this.panel1.Size = new System.Drawing.Size(200, 561);
             this.panel1.TabIndex = 1;
             // 
             // btnModifyStudent
@@ -61,9 +61,9 @@
             this.btnModifyStudent.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifyStudent.ForeColor = System.Drawing.Color.White;
             this.btnModifyStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModifyStudent.Location = new System.Drawing.Point(9, 379);
+            this.btnModifyStudent.Location = new System.Drawing.Point(12, 379);
             this.btnModifyStudent.Name = "btnModifyStudent";
-            this.btnModifyStudent.Size = new System.Drawing.Size(197, 58);
+            this.btnModifyStudent.Size = new System.Drawing.Size(188, 58);
             this.btnModifyStudent.TabIndex = 6;
             this.btnModifyStudent.Text = "Add | Edit\r\nStudent\r\n";
             this.btnModifyStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -79,7 +79,7 @@
             this.btnReserve.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReserve.Location = new System.Drawing.Point(12, 318);
             this.btnReserve.Name = "btnReserve";
-            this.btnReserve.Size = new System.Drawing.Size(197, 54);
+            this.btnReserve.Size = new System.Drawing.Size(188, 54);
             this.btnReserve.TabIndex = 5;
             this.btnReserve.Text = "Reserve";
             this.btnReserve.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -103,7 +103,7 @@
             this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPayment.Location = new System.Drawing.Point(12, 258);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(197, 54);
+            this.btnPayment.Size = new System.Drawing.Size(183, 54);
             this.btnPayment.TabIndex = 4;
             this.btnPayment.Text = "Payment";
             this.btnPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -119,7 +119,7 @@
             this.btnReturns.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReturns.Location = new System.Drawing.Point(12, 204);
             this.btnReturns.Name = "btnReturns";
-            this.btnReturns.Size = new System.Drawing.Size(197, 54);
+            this.btnReturns.Size = new System.Drawing.Size(183, 54);
             this.btnReturns.TabIndex = 4;
             this.btnReturns.Text = "Returns";
             this.btnReturns.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -135,7 +135,7 @@
             this.btnLoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoan.Location = new System.Drawing.Point(12, 144);
             this.btnLoan.Name = "btnLoan";
-            this.btnLoan.Size = new System.Drawing.Size(197, 54);
+            this.btnLoan.Size = new System.Drawing.Size(183, 54);
             this.btnLoan.TabIndex = 4;
             this.btnLoan.Text = "Loans";
             this.btnLoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -144,22 +144,23 @@
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(209, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(200, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(561, 523);
+            this.panel2.Size = new System.Drawing.Size(784, 561);
             this.panel2.TabIndex = 2;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 523);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "ABC Automotive";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
