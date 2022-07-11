@@ -21,25 +21,9 @@ namespace ABCAutomotive.UI.Pages
             InitializeComponent();
         }
 
-        public static Returns _instance;
-
-        public static Returns Instance
-        {
-            get
-            {
-                if (_instance == null || _instance.HasBeenClosed)
-                {
-                    _instance = new Returns();
-                    _instance.Position = 0;
-                }
-
-                return _instance;
-            }
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
-            _instance.Close();
+            this.Hide();
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)

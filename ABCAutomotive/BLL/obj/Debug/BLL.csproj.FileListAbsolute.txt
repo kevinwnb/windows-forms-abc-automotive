@@ -26,3 +26,18 @@ C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-
 C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\BLL\obj\Debug\BLL.dll
 C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\BLL\obj\Debug\BLL.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\BLL.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\BLL.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Model.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Repository.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Types.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\DAL.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Model.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Repository.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Types.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\DAL.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\obj\Debug\BLL.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\obj\Debug\BLL.pdb

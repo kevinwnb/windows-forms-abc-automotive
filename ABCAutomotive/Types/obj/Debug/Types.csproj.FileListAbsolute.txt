@@ -8,3 +8,9 @@ C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-
 C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Types\obj\Debug\Types.csprojAssemblyReference.cache
 C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Types\obj\Debug\Types.dll
 C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Types\obj\Debug\Types.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Types\bin\Debug\Types.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Types\bin\Debug\Types.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Types\obj\Debug\Types.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Types\obj\Debug\Types.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Types\obj\Debug\Types.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Types\obj\Debug\Types.pdb

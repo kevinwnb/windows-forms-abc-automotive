@@ -16,27 +16,6 @@ namespace ABCAutomotive.UI.Pages
 {
     public partial class Reserve : PageControl
     {
-        public static Reserve _instance;
-
-        public static Reserve Instance
-        {
-            get
-            {
-                if (_instance == null || _instance.HasBeenClosed)
-                {
-                    _instance = new Reserve();
-                    _instance.Position = 0;
-                }
-
-                return _instance;
-            }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            _instance.Close();
-        }
-
         public Reserve()
         {
             InitializeComponent();

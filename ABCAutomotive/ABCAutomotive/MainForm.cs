@@ -20,153 +20,57 @@ namespace ABCAutomotive
 
         internal int selectedPageIndex;
         internal List<PageControl> list = new List<PageControl>();
+        private PageControl current_page = null;
 
         private int formerPagePosistion;
 
         private void btnLoan_Click(object sender, EventArgs e)
         {
+            Loans loans = new Loans();
             SidePanel.Height = btnLoan.Height;
             SidePanel.Top = btnLoan.Top;
 
-            formerPagePosistion = 0;
-            DisplayPage(panel2, Loans.Instance);
+            if (current_page != null)
+            {
+                current_page.Close();
+            }
+
+            panel2.Controls.Add(loans);
+
+            this.current_page = loans;
         }
 
         private void btnReturns_Click(object sender, EventArgs e)
         {
+            Returns returns = new Returns();
             SidePanel.Height = btnReturns.Height;
             SidePanel.Top = btnReturns.Top;
 
-            formerPagePosistion = 1;
-            DisplayPage(panel2, Returns.Instance);
+            if (current_page != null)
+            {
+                current_page.Close();
+            }
+
+            panel2.Controls.Add(returns);
+            
+            this.current_page = returns;
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
+            Payment payment = new Payment();
             SidePanel.Height = btnPayment.Height;
             SidePanel.Top = btnPayment.Top;
 
-            formerPagePosistion = 2;
-            DisplayPage(panel2, Payment.Instance);
-        }
-
-        #region TabMethods
-        public void DisplayPage(Panel panel, PageControl page)
-        {
-
-            list = panel2.Controls.OfType<PageControl>().ToList().OrderBy(pa => pa.Position).ToList();
-
-            if (!panel.Contains(page))
+            if (current_page != null)
             {
-                panel2.Controls.Add(page);
-                //page.Dock = DockStyle.Fill;
-                //page.BringToFront();
-            }
-            else
-            {
-                //page.Dock = DockStyle.Fill;
-                //page.BringToFront();
-            }
-            page.Dock = DockStyle.Fill;
-            page.BringToFront();
-        }
-
-        //public int ChangePageAccordingly()
-        //{
-        //    //if (formerPagePosistion == 0)
-        //    //{
-        //    //    return 1;
-        //    //}
-
-        //    //if (formerPagePosistion == 1)
-        //    //{
-        //    //    return 0;
-        //    //}
-        //    //if (formerPagePosistion == 2)
-        //    //{
-        //    //    return 3;
-        //    //}
-        //    //if (formerPagePosistion == 3)
-        //    //{
-        //    //    return 2;
-        //    //}
-        //    //return 3;
-
-        //    return 0;
-        //}
-
-        public void ChangeSelectedPage()
-        {
-            
-            if (selectedPageIndex > list.Count - 1)
-            {
-                selectedPageIndex--;
-
-            }
-            int previousPageIndex;
-            int nextPageIndex;
-            switch (selectedPageIndex)
-            {
-
-                case 0:
-
-                    nextPageIndex = selectedPageIndex;
-                    previousPageIndex = selectedPageIndex - 1;
-                    DetermineNextTab(panel2, nextPageIndex, previousPageIndex);
-                    break;
-
-                case 1:
-                    nextPageIndex = selectedPageIndex;
-                    previousPageIndex = selectedPageIndex - 1;
-                    DetermineNextTab(panel2, previousPageIndex, nextPageIndex);
-                    break;
-
-                case 2:
-                    nextPageIndex = selectedPageIndex;
-                    previousPageIndex = selectedPageIndex - 1;
-                    DetermineNextTab(panel2, previousPageIndex, nextPageIndex);
-
-                    break;
-
-                case 3:
-                    nextPageIndex = selectedPageIndex;
-                    previousPageIndex = selectedPageIndex - 1;
-                    DetermineNextTab(panel2, previousPageIndex, nextPageIndex);
-                    break;
-
-
-                default:
-                    nextPageIndex = 0;
-                    previousPageIndex = selectedPageIndex - 1;
-                    DetermineNextTab(panel2, nextPageIndex, previousPageIndex);
-
-                    break;
+                current_page.Close();
             }
 
+            panel2.Controls.Add(payment);
 
+            current_page = payment;
         }
-
-        private void DetermineNextTab(Panel panel, int tabOne, int tabTwo)
-        {
-            list = panel2.Controls.OfType<PageControl>().ToList().OrderBy(pa => pa.Position).ToList();
-
-            if (panel.Controls.OfType<PageControl>().Count() > 0)
-            {
-
-                if (panel.Controls.Contains(list[tabOne]))
-                {
-                    DisplayPage(panel, list[tabOne]);
-                }
-                else if (panel.Controls.Contains(list[tabTwo]))
-                {
-                    DisplayPage(panel, list[tabTwo]);
-                }
-
-            }         
-
-        }
-
-        #endregion TabMethods
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -186,19 +90,35 @@ namespace ABCAutomotive
 
         private void btnReserve_Click(object sender, EventArgs e)
         {
+            Reserve reserve = new Reserve();
             SidePanel.Height = btnReserve.Height;
             SidePanel.Top = btnReserve.Top;
 
-            DisplayPage(panel2, Reserve.Instance);
+            if (current_page != null)
+            {
+                current_page.Close();
+            }
+
+            panel2.Controls.Add(reserve);
+
+            current_page = reserve;
 
         }
 
         private void btnModifyStudent_Click(object sender, EventArgs e)
         {
+            EditStudent student = new EditStudent();
             SidePanel.Height = btnModifyStudent.Height;
             SidePanel.Top = btnModifyStudent.Top;
 
-            DisplayPage(panel2, EditStudent.Instance);
+            if (current_page != null)
+            {
+                current_page.Close();
+            }
+
+            panel2.Controls.Add(student);
+
+            current_page = student;
         }
     }
 }

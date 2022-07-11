@@ -14,7 +14,7 @@ namespace DAL
         private SqlCommand CreateCommand(string cmdText, CommandType cmdType, List<Parameter> parameters)
         {
             SqlConnection conn = new SqlConnection(
-                ConfigurationManager.ConnectionStrings["ABCAutomotive"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["abc_automotive"].ConnectionString);
 
             SqlCommand cmd = new SqlCommand(cmdText, conn);
             cmd.CommandType = cmdType;

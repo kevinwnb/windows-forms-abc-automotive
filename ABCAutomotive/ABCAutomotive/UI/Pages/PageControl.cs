@@ -21,29 +21,9 @@ namespace ABCAutomotive.UI.Pages
             InitializeComponent();
         }
 
-        MainForm parentForm; // Main form instance
-
-        public bool HasBeenClosed { get; set; } = false;
-
-        public int Position { get; set; }
-
-        
         public void Close()
         {
-
-            parentForm = (MainForm)ParentForm;
-
-
-            if (parentForm.list.Count != 0)
-            {
-                int i = parentForm.list.IndexOf(this);
-                parentForm.selectedPageIndex = i;
-            }
-            this.Parent.Controls.Remove(this);
-            this.HasBeenClosed = true;
-            parentForm.ChangeSelectedPage();
-
-
+            this.Dispose();
         }
     }
 }

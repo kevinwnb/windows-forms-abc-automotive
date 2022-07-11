@@ -21,28 +21,7 @@ namespace ABCAutomotive.UI.Pages
             InitializeComponent();
         }
 
-        public static EditStudent _instance;
-
-        public static EditStudent Instance
-        {
-            get
-            {
-                if (_instance == null || _instance.HasBeenClosed)
-                {
-                    _instance = new EditStudent();
-                    _instance.Position = 0;
-                }
-
-                return _instance;
-            }
-        }
-
         Student student;
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            _instance.Close();
-        }
 
         string _studentID = string.Empty;
 

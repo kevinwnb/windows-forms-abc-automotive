@@ -14,30 +14,9 @@ namespace ABCAutomotive.UI.Pages
 {
     public partial class Payment : PageControl
     {
-        public static Payment _instance;
-
-        public static Payment Instance
-        {
-            get
-            {
-                if (_instance == null || _instance.HasBeenClosed)
-                {
-                    _instance = new Payment();
-                    _instance.Position = 0;
-                }
-
-                return _instance;
-            }
-        }
-
         public Payment()
         {
             InitializeComponent();
-        }
-
-        private void BtnClose_Click(object sender, EventArgs e)
-        {
-            _instance.Close();
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)

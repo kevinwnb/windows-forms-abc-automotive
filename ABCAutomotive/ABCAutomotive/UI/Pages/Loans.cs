@@ -22,28 +22,10 @@ namespace ABCAutomotive.UI.Pages
             InitializeComponent();
         }
 
-        public static Loans _instance;
-
-        public static Loans Instance
-        {
-            get
-            {
-                if (_instance == null || _instance.HasBeenClosed)
-                {
-                    _instance = new Loans();
-                    _instance.Position = 0;
-                }
-
-                return _instance;
-            }
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
-            _instance.Close();
+            this.Hide();
         }
-
-
 
         private void Loans_Load(object sender, EventArgs e)
         {

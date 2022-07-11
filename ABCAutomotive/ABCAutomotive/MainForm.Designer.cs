@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnModifyStudent = new System.Windows.Forms.Button();
             this.btnReserve = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnReturns = new System.Windows.Forms.Button();
             this.btnLoan = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnModifyStudent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +50,25 @@
             this.panel1.Controls.Add(this.btnLoan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(418, 1321);
+            this.panel1.Size = new System.Drawing.Size(209, 523);
             this.panel1.TabIndex = 1;
+            // 
+            // btnModifyStudent
+            // 
+            this.btnModifyStudent.FlatAppearance.BorderSize = 0;
+            this.btnModifyStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModifyStudent.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifyStudent.ForeColor = System.Drawing.Color.White;
+            this.btnModifyStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModifyStudent.Location = new System.Drawing.Point(9, 379);
+            this.btnModifyStudent.Name = "btnModifyStudent";
+            this.btnModifyStudent.Size = new System.Drawing.Size(197, 58);
+            this.btnModifyStudent.TabIndex = 6;
+            this.btnModifyStudent.Text = "Add | Edit\r\nStudent\r\n";
+            this.btnModifyStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModifyStudent.UseVisualStyleBackColor = true;
+            this.btnModifyStudent.Click += new System.EventHandler(this.btnModifyStudent_Click);
             // 
             // btnReserve
             // 
@@ -62,10 +77,9 @@
             this.btnReserve.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReserve.ForeColor = System.Drawing.Color.White;
             this.btnReserve.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReserve.Location = new System.Drawing.Point(24, 612);
-            this.btnReserve.Margin = new System.Windows.Forms.Padding(6);
+            this.btnReserve.Location = new System.Drawing.Point(12, 318);
             this.btnReserve.Name = "btnReserve";
-            this.btnReserve.Size = new System.Drawing.Size(394, 104);
+            this.btnReserve.Size = new System.Drawing.Size(197, 54);
             this.btnReserve.TabIndex = 5;
             this.btnReserve.Text = "Reserve";
             this.btnReserve.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -75,10 +89,9 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.SidePanel.Location = new System.Drawing.Point(2, 277);
-            this.SidePanel.Margin = new System.Windows.Forms.Padding(6);
+            this.SidePanel.Location = new System.Drawing.Point(1, 144);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(20, 104);
+            this.SidePanel.Size = new System.Drawing.Size(10, 54);
             this.SidePanel.TabIndex = 4;
             // 
             // btnPayment
@@ -88,10 +101,9 @@
             this.btnPayment.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.ForeColor = System.Drawing.Color.White;
             this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPayment.Location = new System.Drawing.Point(24, 496);
-            this.btnPayment.Margin = new System.Windows.Forms.Padding(6);
+            this.btnPayment.Location = new System.Drawing.Point(12, 258);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(394, 104);
+            this.btnPayment.Size = new System.Drawing.Size(197, 54);
             this.btnPayment.TabIndex = 4;
             this.btnPayment.Text = "Payment";
             this.btnPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -105,10 +117,9 @@
             this.btnReturns.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturns.ForeColor = System.Drawing.Color.White;
             this.btnReturns.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReturns.Location = new System.Drawing.Point(24, 381);
-            this.btnReturns.Margin = new System.Windows.Forms.Padding(6);
+            this.btnReturns.Location = new System.Drawing.Point(12, 204);
             this.btnReturns.Name = "btnReturns";
-            this.btnReturns.Size = new System.Drawing.Size(394, 104);
+            this.btnReturns.Size = new System.Drawing.Size(197, 54);
             this.btnReturns.TabIndex = 4;
             this.btnReturns.Text = "Returns";
             this.btnReturns.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,10 +133,9 @@
             this.btnLoan.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoan.ForeColor = System.Drawing.Color.White;
             this.btnLoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoan.Location = new System.Drawing.Point(24, 277);
-            this.btnLoan.Margin = new System.Windows.Forms.Padding(6);
+            this.btnLoan.Location = new System.Drawing.Point(12, 144);
             this.btnLoan.Name = "btnLoan";
-            this.btnLoan.Size = new System.Drawing.Size(394, 104);
+            this.btnLoan.Size = new System.Drawing.Size(197, 54);
             this.btnLoan.TabIndex = 4;
             this.btnLoan.Text = "Loans";
             this.btnLoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -136,37 +146,20 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(418, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(209, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1766, 1321);
+            this.panel2.Size = new System.Drawing.Size(561, 523);
             this.panel2.TabIndex = 2;
-            // 
-            // btnModifyStudent
-            // 
-            this.btnModifyStudent.FlatAppearance.BorderSize = 0;
-            this.btnModifyStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModifyStudent.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifyStudent.ForeColor = System.Drawing.Color.White;
-            this.btnModifyStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModifyStudent.Location = new System.Drawing.Point(18, 728);
-            this.btnModifyStudent.Margin = new System.Windows.Forms.Padding(6);
-            this.btnModifyStudent.Name = "btnModifyStudent";
-            this.btnModifyStudent.Size = new System.Drawing.Size(394, 112);
-            this.btnModifyStudent.TabIndex = 6;
-            this.btnModifyStudent.Text = "Add | Edit\r\nStudent\r\n";
-            this.btnModifyStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnModifyStudent.UseVisualStyleBackColor = true;
-            this.btnModifyStudent.Click += new System.EventHandler(this.btnModifyStudent_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2184, 1321);
+            this.ClientSize = new System.Drawing.Size(770, 523);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Text = "ABC Automotive";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
