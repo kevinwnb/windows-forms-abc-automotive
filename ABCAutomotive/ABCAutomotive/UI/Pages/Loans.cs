@@ -34,9 +34,6 @@ namespace ABCAutomotive.UI.Pages
                 dgvStudents.AutoResizeColumns();
                 dgvLoans.AutoResizeColumns();
                 dgvRessourceToBorrow.AutoResizeColumns();
-
-                grpStudentInformations.Enabled = false;
-                grpRessourceToBorrow.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -104,64 +101,22 @@ namespace ABCAutomotive.UI.Pages
         {
             try
             {
-                label11.Text = string.Empty;
-                int selectedRow = e.RowIndex;
-                if (selectedRow != -1)
+                if (dgvStudents.CurrentRow != null)
                 {
-                    string studentID = dgvStudents.Rows[selectedRow].Cells["ID"].Value.ToString();
-
-
-
-                    StudentBL studentBL = new StudentBL();
-
-                    Student retrievedStudent = studentBL.GetStudent(id: studentID);
-
-                    if (studentBL.Errors.Count == 0)
-                    {
-                        grpStudentInformations.Enabled = true;
-                        grpRessourceToBorrow.Enabled = true;
-                        //label11.Text = string.Empty;
-
-
-                        PopulateStudentFields(retrievedStudent);
-
-                        StudentLoanInfoBL loanInfoBL = new StudentLoanInfoBL();
-
-                        PopulateStudentLoans(studentID, loanInfoBL);
-
-                    }
-                    else
-                    {
-                        PopulateStudentFields(retrievedStudent);
-
-                        grpStudentInformations.Enabled = true;
-                        dgvLoans.DataSource = null;
-
-                        grpRessourceToBorrow.Enabled = false;
-                        dgvRessourceToBorrow.DataSource = null;
-                        txtSearchStudent.ResetText();
-
-                        txtRessourceID.ResetText();
-
-                        foreach (ValidationError error in studentBL.Errors)
-                        {
-                            label11.Text += error.Description + "\n";
-                            label11.ForeColor = Color.Red;
-                        }
-                    }
-
+                    DataGridViewCellCollection cells = dgvStudents.CurrentRow.Cells;
+                    txtStudentID.Text = cells["ID"].Value.ToString();
+                    txtFirstName.Text = cells["FirstName"].Value.ToString();
+                    txtLastName.Text = cells["LastName"].Value.ToString();
+                    txtProgram.Text = cells["Program"].Value.ToString();
+                    txtBalanceDue.Text = cells["BalanceDue"].Value.ToString();
+                    txtStartDate.Text = Convert.ToDateTime(cells["StartDate"].Value).Date.ToString("d");
+                    txtEndDate.Text = Convert.ToDateTime(cells["EndDate"].Value).Date.ToString("d");
+                    chkIsActive.Enabled = Convert.ToBoolean(cells["Status"].Value);
                 }
-                else
-                {
-                    MessageBox.Show("Please select  a valid row.", "Invalid Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.Message, ex.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -219,8 +174,8 @@ namespace ABCAutomotive.UI.Pages
             //        }
 
 
-                    
-                   
+
+
 
             //        if (msg != string.Empty)
             //        {

@@ -32,11 +32,14 @@ namespace DAL
                         while (dr.Read())
                         {
                             Student student = new Student();
+                            student.ID = Convert.ToInt32(dr["ID"]);
                             student.FirstName = dr["FirstName"].ToString();
                             student.LastName = dr["LastName"].ToString();
                             student.BalanceDue = Convert.ToDecimal(dr["BalanceDue"]);
                             student.Status = Convert.ToBoolean(dr["Status"]);
                             student.Program = dr["Program"].ToString();
+                            student.StartDate = Convert.ToDateTime(dr["StartDate"]);
+                            student.EndDate = Convert.ToDateTime(dr["EndDate"]);
                             student.TimeStamp = Convert.ToString(dr["TimeStamp"]);
                             students.Add(student);
                         }

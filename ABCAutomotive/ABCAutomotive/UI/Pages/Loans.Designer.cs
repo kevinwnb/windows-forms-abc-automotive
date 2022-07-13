@@ -63,7 +63,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtStartDate = new System.Windows.Forms.TextBox();
             this.txtEndDate = new System.Windows.Forms.TextBox();
-            this.txtProgramID = new System.Windows.Forms.TextBox();
+            this.txtProgram = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -103,7 +103,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 16);
             this.label3.TabIndex = 39;
-            this.label3.Text = "Balance Due :";
+            this.label3.Text = "Balance Due";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dgvLoans
@@ -122,7 +122,6 @@
             // txtBalanceDue
             // 
             this.txtBalanceDue.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtBalanceDue.Enabled = false;
             this.txtBalanceDue.Font = new System.Drawing.Font("Microsoft Tai Le", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBalanceDue.Location = new System.Drawing.Point(64, 152);
             this.txtBalanceDue.Margin = new System.Windows.Forms.Padding(2);
@@ -146,7 +145,6 @@
             // txtLastName
             // 
             this.txtLastName.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtLastName.Enabled = false;
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(428, 43);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
@@ -170,7 +168,6 @@
             // txtFirstName
             // 
             this.txtFirstName.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtFirstName.Enabled = false;
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(246, 43);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
@@ -348,6 +345,7 @@
             this.dgvStudents.Location = new System.Drawing.Point(15, 32);
             this.dgvStudents.Margin = new System.Windows.Forms.Padding(2);
             this.dgvStudents.Name = "dgvStudents";
+            this.dgvStudents.ReadOnly = true;
             this.dgvStudents.RowHeadersWidth = 82;
             this.dgvStudents.RowTemplate.Height = 33;
             this.dgvStudents.Size = new System.Drawing.Size(294, 226);
@@ -460,7 +458,7 @@
             this.grpStudentInformations.Controls.Add(this.label6);
             this.grpStudentInformations.Controls.Add(this.txtStartDate);
             this.grpStudentInformations.Controls.Add(this.txtEndDate);
-            this.grpStudentInformations.Controls.Add(this.txtProgramID);
+            this.grpStudentInformations.Controls.Add(this.txtProgram);
             this.grpStudentInformations.Controls.Add(this.label5);
             this.grpStudentInformations.Controls.Add(this.label4);
             this.grpStudentInformations.Controls.Add(this.label9);
@@ -509,7 +507,6 @@
             // txtStartDate
             // 
             this.txtStartDate.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtStartDate.Enabled = false;
             this.txtStartDate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStartDate.Location = new System.Drawing.Point(246, 99);
             this.txtStartDate.Margin = new System.Windows.Forms.Padding(2);
@@ -521,7 +518,6 @@
             // txtEndDate
             // 
             this.txtEndDate.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtEndDate.Enabled = false;
             this.txtEndDate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndDate.Location = new System.Drawing.Point(428, 99);
             this.txtEndDate.Margin = new System.Windows.Forms.Padding(2);
@@ -530,17 +526,16 @@
             this.txtEndDate.Size = new System.Drawing.Size(154, 25);
             this.txtEndDate.TabIndex = 67;
             // 
-            // txtProgramID
+            // txtProgram
             // 
-            this.txtProgramID.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtProgramID.Enabled = false;
-            this.txtProgramID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProgramID.Location = new System.Drawing.Point(64, 99);
-            this.txtProgramID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtProgramID.Name = "txtProgramID";
-            this.txtProgramID.ReadOnly = true;
-            this.txtProgramID.Size = new System.Drawing.Size(154, 25);
-            this.txtProgramID.TabIndex = 63;
+            this.txtProgram.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtProgram.Font = new System.Drawing.Font("Microsoft Tai Le", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProgram.Location = new System.Drawing.Point(64, 99);
+            this.txtProgram.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProgram.Name = "txtProgram";
+            this.txtProgram.ReadOnly = true;
+            this.txtProgram.Size = new System.Drawing.Size(154, 25);
+            this.txtProgram.TabIndex = 63;
             // 
             // label5
             // 
@@ -563,7 +558,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 16);
             this.label4.TabIndex = 64;
-            this.label4.Text = "Program Type";
+            this.label4.Text = "Program";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label9
@@ -581,7 +576,6 @@
             // txtStudentID
             // 
             this.txtStudentID.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtStudentID.Enabled = false;
             this.txtStudentID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentID.Location = new System.Drawing.Point(64, 43);
             this.txtStudentID.Margin = new System.Windows.Forms.Padding(2);
@@ -688,7 +682,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtStartDate;
         private System.Windows.Forms.TextBox txtEndDate;
-        private System.Windows.Forms.TextBox txtProgramID;
+        private System.Windows.Forms.TextBox txtProgram;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
