@@ -43,9 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess.cs" />
+    <Compile Include="LoanDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{E9E09825-A133-4722-9AE3-8DA1730CD60B}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Types\Types.csproj">
       <Project>{fb71d549-cff9-48df-9f91-637f5d63dd7b}</Project>
       <Name>Types</Name>

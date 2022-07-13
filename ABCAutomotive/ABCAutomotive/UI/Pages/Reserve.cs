@@ -213,14 +213,14 @@ namespace ABCAutomotive.UI.Pages
 
         private void PopulateStudentFields(Student student)
         {
-            txtStudentID.Text = student.ID.ToString();
-            txtFirstName.Text = student.FirstName;
-            txtLastName.Text = student.LastName;
-            txtProgramID.Text = student.ProgramID.ToString();
-            txtStartDate.Text = student.StartDate.ToString();
-            txtEndDate.Text = student.EndDate.ToString();
-            txtBalanceDue.Text = student.BalanceDue.ToString();
-            chkIsActive.Checked = Convert.ToBoolean(student.Status);
+            //txtStudentID.Text = student.ID.ToString();
+            //txtFirstName.Text = student.FirstName;
+            //txtLastName.Text = student.LastName;
+            //txtProgramID.Text = student.ProgramID.ToString();
+            //txtStartDate.Text = student.StartDate.ToString();
+            //txtEndDate.Text = student.EndDate.ToString();
+            //txtBalanceDue.Text = student.BalanceDue.ToString();
+            //chkIsActive.Checked = Convert.ToBoolean(student.Status);
         }
 
         private void btnReserve_Click(object sender, EventArgs e)

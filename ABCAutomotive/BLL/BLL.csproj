@@ -54,6 +54,10 @@
     <Compile Include="ValidationError.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{55ddc7bc-9c74-4475-b956-67c6c7cf89d4}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{e9e09825-a133-4722-9ae3-8da1730cd60b}</Project>
       <Name>Model</Name>

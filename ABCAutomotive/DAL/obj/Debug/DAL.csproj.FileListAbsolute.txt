@@ -23,3 +23,5 @@ C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\DAL\obj\De
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\DAL\obj\Debug\DAL.dll
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\DAL\obj\Debug\DAL.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\DAL\bin\Debug\Model.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\DAL\bin\Debug\Model.pdb

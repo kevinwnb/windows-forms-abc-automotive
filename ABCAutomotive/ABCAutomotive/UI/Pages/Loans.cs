@@ -48,11 +48,10 @@ namespace ABCAutomotive.UI.Pages
         {
             try
             {
-                string parameter = txtSearchStudent.Text;
-
-                StudentBL studentBL = new StudentBL();
-
+                LoanBL loanBL = new LoanBL();
                 List<Student> matchingStudents = new List<Student>();
+
+                string parameter = txtSearchStudent.Text;
 
                 string errorMessage = ValidateForm(sender);
 
@@ -60,12 +59,12 @@ namespace ABCAutomotive.UI.Pages
                 {
                     if (rdoID.Checked)
                     {
-                        matchingStudents = studentBL.GetMatchingStudents(id: parameter);
+                        matchingStudents.Add(loanBL.GetStudent(Convert.ToInt32(parameter)));
                     }
 
                     if (rdoPartialLastName.Checked)
                     {
-                        matchingStudents = studentBL.GetMatchingStudents(parttialLastName: parameter);
+                        matchingStudents = loanBL.GetStudents(parameter);
                     }
 
                     if (matchingStudents.Count == 0)
@@ -168,81 +167,81 @@ namespace ABCAutomotive.UI.Pages
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (dgvRessourceToBorrow.DataSource != null)
-            {
-                ResourceBL ressourceBL = new ResourceBL();
-                LoanBL loanBL = new LoanBL();
-                StudentLoanInfoBL loanInfoBL = new StudentLoanInfoBL();
+            //try
+            //{
+            //    if (dgvRessourceToBorrow.DataSource != null)
+            //{
+            //    ResourceBL ressourceBL = new ResourceBL();
+            //    LoanBL loanBL = new LoanBL();
+            //    StudentLoanInfoBL loanInfoBL = new StudentLoanInfoBL();
 
-                int ressourceID = Convert.ToInt32(txtRessourceID.Text);
-                Resource ressource = ressourceBL.GetRessourceDetails(ressourceID);
+            //    int ressourceID = Convert.ToInt32(txtRessourceID.Text);
+            //    Resource ressource = ressourceBL.GetRessourceDetails(ressourceID);
 
-                Loan loan = PopulateLoanObject(ressource, txtStudentID.Text);
+            //    Loan loan = PopulateLoanObject(ressource, txtStudentID.Text);
 
-                //loanBL._loans = (List<Loan>)dgvLoans.DataSource;
+            //    //loanBL._loans = (List<Loan>)dgvLoans.DataSource;
 
-                List<StudentLoanInfo> studentLoanInfos = (List<StudentLoanInfo>)dgvLoans.DataSource;
+            //    List<StudentLoanInfo> studentLoanInfos = (List<StudentLoanInfo>)dgvLoans.DataSource;
 
-                foreach (StudentLoanInfo stli in studentLoanInfos)
-                {
-                    Loan studentLoan = loanBL.GetLoanByID(stli.LoanID);
+            //    foreach (StudentLoanInfo stli in studentLoanInfos)
+            //    {
+            //        Loan studentLoan = loanBL.GetLoanByID(stli.LoanID);
 
-                    loanBL._loans.Add(studentLoan);
-                }
+            //        loanBL._loans.Add(studentLoan);
+            //    }
 
 
 
-                if (loanBL.AddLoan(loan))
-                {
-                    string msg = string.Empty;
-                    if (ressourceBL.ModifyRessource(ressource, txtStudentID.Text))
-                    {
-                        msg = "\nRessource status set to \"On Loan\"";
-                    }
+            //    if (loanBL.AddLoan(loan))
+            //    {
+            //        string msg = string.Empty;
+            //        if (ressourceBL.ModifyRessource(ressource, txtStudentID.Text))
+            //        {
+            //            msg = "\nRessource status set to \"On Loan\"";
+            //        }
 
-                    PopulateDgvRessource(ressource.ID);
-                    PopulateStudentLoans(txtStudentID.Text, loanInfoBL);
+            //        PopulateDgvRessource(ressource.ID);
+            //        PopulateStudentLoans(txtStudentID.Text, loanInfoBL);
 
-                    txtRessourceID.ResetText();
-                    dgvRessourceToBorrow.DataSource = null;
+            //        txtRessourceID.ResetText();
+            //        dgvRessourceToBorrow.DataSource = null;
 
-                    MessageBox.Show("Resource succesfuly added to the student Loans." + msg);
-                }
-                else
-                {
-                    string msg = string.Empty;
+            //        MessageBox.Show("Resource succesfuly added to the student Loans." + msg);
+            //    }
+            //    else
+            //    {
+            //        string msg = string.Empty;
 
-                    foreach (ValidationError error in loanBL.Errors)
-                    {
-                        msg += error.Description + "\n";
-                    }
+            //        foreach (ValidationError error in loanBL.Errors)
+            //        {
+            //            msg += error.Description + "\n";
+            //        }
 
 
                     
                    
 
-                    if (msg != string.Empty)
-                    {
-                        dgvRessourceToBorrow.DataSource = null;
-                        txtRessourceID.ResetText();
-                        txtRessourceID.Focus();
+            //        if (msg != string.Empty)
+            //        {
+            //            dgvRessourceToBorrow.DataSource = null;
+            //            txtRessourceID.ResetText();
+            //            txtRessourceID.Focus();
 
-                        MessageBox.Show(msg);
-                    }
+            //            MessageBox.Show(msg);
+            //        }
 
-                }
+            //    }
 
-            }
+            //}
 
 
-            }
+            //}
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.GetType().ToString(), ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.GetType().ToString(), ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btnSearchRessource_Click(object sender, EventArgs e)
@@ -285,14 +284,14 @@ namespace ABCAutomotive.UI.Pages
 
         private void PopulateStudentFields(Student student)
         {
-            txtStudentID.Text = student.ID.ToString();
-            txtFirstName.Text = student.FirstName;
-            txtLastName.Text = student.LastName;
-            txtProgramID.Text = student.ProgramID.ToString();
-            txtStartDate.Text = student.StartDate.ToString();
-            txtEndDate.Text = student.EndDate.ToString();
-            txtBalanceDue.Text = student.BalanceDue.ToString();
-            chkIsActive.Checked = Convert.ToBoolean(student.Status);
+            //txtStudentID.Text = student.ID.ToString();
+            //txtFirstName.Text = student.FirstName;
+            //txtLastName.Text = student.LastName;
+            //txtProgramID.Text = student.ProgramID.ToString();
+            //txtStartDate.Text = student.StartDate.ToString();
+            //txtEndDate.Text = student.EndDate.ToString();
+            //txtBalanceDue.Text = student.BalanceDue.ToString();
+            //chkIsActive.Checked = Convert.ToBoolean(student.Status);
         }
 
         private void PopulateDgvRessource(int parameter)

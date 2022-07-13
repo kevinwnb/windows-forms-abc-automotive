@@ -79,32 +79,33 @@ namespace Repository
 
         public bool Update(Student student)
         {
-            List<Parameter> parameters = new List<Parameter>();
+            //List<Parameter> parameters = new List<Parameter>();
 
-            parameters.Add(new Parameter("@TimeStamp", student.TimeStamp, 0, SqlDbType.Timestamp, ParameterDirection.InputOutput));
-            parameters.Add(new Parameter("@StudentID", student.ID, 8, SqlDbType.Int));
-            parameters.Add(new Parameter("@FirstName", student.FirstName, 50, SqlDbType.NVarChar));
-            parameters.Add(new Parameter("@LastName", student.LastName, 50, SqlDbType.NVarChar));
-            parameters.Add(new Parameter("@BalanceDue", student.BalanceDue, 0, SqlDbType.Money));
-            parameters.Add(new Parameter("@Status", student.Status, 0, SqlDbType.Bit));
-            parameters.Add(new Parameter("@ProgramID", student.ProgramID, 0, SqlDbType.Int));
-            parameters.Add(new Parameter("@StartDate", student.StartDate, 0, SqlDbType.DateTime));
-            parameters.Add(new Parameter("@EndDate", student.EndDate, 0, SqlDbType.DateTime));
+            //parameters.Add(new Parameter("@TimeStamp", student.TimeStamp, 0, SqlDbType.Timestamp, ParameterDirection.InputOutput));
+            //parameters.Add(new Parameter("@StudentID", student.ID, 8, SqlDbType.Int));
+            //parameters.Add(new Parameter("@FirstName", student.FirstName, 50, SqlDbType.NVarChar));
+            //parameters.Add(new Parameter("@LastName", student.LastName, 50, SqlDbType.NVarChar));
+            //parameters.Add(new Parameter("@BalanceDue", student.BalanceDue, 0, SqlDbType.Money));
+            //parameters.Add(new Parameter("@Status", student.Status, 0, SqlDbType.Bit));
+            //parameters.Add(new Parameter("@ProgramID", student.ProgramID, 0, SqlDbType.Int));
+            //parameters.Add(new Parameter("@StartDate", student.StartDate, 0, SqlDbType.DateTime));
+            //parameters.Add(new Parameter("@EndDate", student.EndDate, 0, SqlDbType.DateTime));
 
-            DataAccess db = new DataAccess();
+            //DataAccess db = new DataAccess();
 
-            int retVal = db.ExecuteNonQuery("UpdateStudent", CommandType.StoredProcedure, parameters);
+            //int retVal = db.ExecuteNonQuery("UpdateStudent", CommandType.StoredProcedure, parameters);
 
-            if (retVal > 0)
-            {
-                student.TimeStamp = (byte[])parameters[0].Value;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            //if (retVal > 0)
+            //{
+            //    student.TimeStamp = (byte[])parameters[0].Value;
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
 
+            return true;
         }
 
         public int GetLastID()
@@ -124,24 +125,24 @@ namespace Repository
         #region Private Methods
         private Student PopulateStudent(DataRow row, bool allProperties = true)
         {
-            Student student = new Student();
+            //Student student = new Student();
 
-            student.ID = PopulateProperty("ID", row, "integer");
-            student.FirstName = PopulateProperty("FirstName", row);
-            student.LastName = PopulateProperty("LastName", row);
-            student.TimeStamp = (byte[])row["TimeStamp"];
+            //student.ID = PopulateProperty("ID", row, "integer");
+            //student.FirstName = PopulateProperty("FirstName", row);
+            //student.LastName = PopulateProperty("LastName", row);
+            //student.TimeStamp = (byte[])row["TimeStamp"];
 
-            if (allProperties)
-            {
-                student.ProgramID = PopulateProperty("ProgramID", row, "integer");
-                student.BalanceDue = PopulateProperty("BalanceDue", row, "decimal");
-                student.Status = PopulateProperty("Status", row, "status");
-                student.StartDate = PopulateProperty("StartDate", row, "datetime");
-                student.EndDate = PopulateProperty("EndDate", row, "datetime");
+            //if (allProperties)
+            //{
+            //    student.ProgramID = PopulateProperty("ProgramID", row, "integer");
+            //    student.BalanceDue = PopulateProperty("BalanceDue", row, "decimal");
+            //    student.Status = PopulateProperty("Status", row, "status");
+            //    student.StartDate = PopulateProperty("StartDate", row, "datetime");
+            //    student.EndDate = PopulateProperty("EndDate", row, "datetime");
 
-            }
+            //}
 
-            return student;
+            return new Student();
         }
 
         private dynamic PopulateProperty(string property, DataRow row, string type = null)
@@ -171,28 +172,30 @@ namespace Repository
 
         public bool InsertStudent(Student student)
         {
-            List<Parameter> parameters = new List<Parameter>();
+            //List<Parameter> parameters = new List<Parameter>();
 
-            parameters.Add(new Parameter("@FirstName", student.FirstName, 50, SqlDbType.NVarChar));
-            parameters.Add(new Parameter("@LastName", student.LastName, 50, SqlDbType.NVarChar));
-            parameters.Add(new Parameter("@BalanceDue", student.BalanceDue, 0, SqlDbType.Money));
-            parameters.Add(new Parameter("@Status", student.Status, 0, SqlDbType.Bit));
-            parameters.Add(new Parameter("@ProgramID", student.ProgramID, 0, SqlDbType.Int));
-            parameters.Add(new Parameter("@StartDate", student.StartDate, 0, SqlDbType.DateTime));
-            parameters.Add(new Parameter("@EndDate", student.EndDate, 0, SqlDbType.DateTime));
+            //parameters.Add(new Parameter("@FirstName", student.FirstName, 50, SqlDbType.NVarChar));
+            //parameters.Add(new Parameter("@LastName", student.LastName, 50, SqlDbType.NVarChar));
+            //parameters.Add(new Parameter("@BalanceDue", student.BalanceDue, 0, SqlDbType.Money));
+            //parameters.Add(new Parameter("@Status", student.Status, 0, SqlDbType.Bit));
+            //parameters.Add(new Parameter("@ProgramID", student.ProgramID, 0, SqlDbType.Int));
+            //parameters.Add(new Parameter("@StartDate", student.StartDate, 0, SqlDbType.DateTime));
+            //parameters.Add(new Parameter("@EndDate", student.EndDate, 0, SqlDbType.DateTime));
 
-            DataAccess db = new DataAccess();
-            
-            int retVal = db.ExecuteNonQuery("InsertStudent", CommandType.StoredProcedure, parameters);
+            //DataAccess db = new DataAccess();
 
-            if (retVal > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            //int retVal = db.ExecuteNonQuery("InsertStudent", CommandType.StoredProcedure, parameters);
+
+            //if (retVal > 0)
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+            return true;
         }
 
 
@@ -236,16 +239,17 @@ namespace Repository
 
         private Student PopulateStudent(DataTable dt)
         {
-            Student student = new Student();
-            student.ID = Convert.ToInt32(dt.Rows[0]["ID"]);
-            student.FirstName = dt.Rows[0]["FirstName"].ToString();
-            student.LastName = dt.Rows[0]["LastName"].ToString();
-            student.BalanceDue = Convert.ToDecimal(dt.Rows[0]["BalanceDue"]);
-            student.Status = (StudentStatus)(Convert.ToInt32(dt.Rows[0]["StudentStatus"]));
-            student.ProgramID = (int)dt.Rows[0]["ProgramID"];
-            student.StartDate = (DateTime)dt.Rows[0]["StartDate"];
-            student.EndDate = (DateTime)dt.Rows[0]["EndDate"];
-            return student;
+            //Student student = new Student();
+            //student.ID = Convert.ToInt32(dt.Rows[0]["ID"]);
+            //student.FirstName = dt.Rows[0]["FirstName"].ToString();
+            //student.LastName = dt.Rows[0]["LastName"].ToString();
+            //student.BalanceDue = Convert.ToDecimal(dt.Rows[0]["BalanceDue"]);
+            //student.Status = (StudentStatus)(Convert.ToInt32(dt.Rows[0]["StudentStatus"]));
+            //student.ProgramID = (int)dt.Rows[0]["ProgramID"];
+            //student.StartDate = (DateTime)dt.Rows[0]["StartDate"];
+            //student.EndDate = (DateTime)dt.Rows[0]["EndDate"];
+            //return student;
+            return new Student();
         }
         #endregion
 

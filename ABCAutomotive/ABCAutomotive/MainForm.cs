@@ -18,11 +18,7 @@ namespace ABCAutomotive
             InitializeComponent();
         }
 
-        internal int selectedPageIndex;
-        internal List<PageControl> list = new List<PageControl>();
         private PageControl current_page = null;
-
-        private int formerPagePosistion;
 
         private void btnLoan_Click(object sender, EventArgs e)
         {

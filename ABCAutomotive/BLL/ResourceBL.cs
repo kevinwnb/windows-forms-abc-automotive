@@ -47,44 +47,44 @@ namespace BLL
 
         public bool ModifyReserveStatus(int resourceID, string studentID)
         {
-            _ressource = this.GetResourceToUpDate(resourceID);
+            //_ressource = this.GetResourceToUpDate(resourceID);
 
-            StudentRepository studentRepository = new StudentRepository();
-            Student student = studentRepository.RetrieveStudentInformation(studentID);
+            //StudentRepository studentRepository = new StudentRepository();
+            //Student student = studentRepository.RetrieveStudentInformation(studentID);
 
-            if (_ressource.Status == Types.ResourceStatus.NotAvailable)
-            {
-                Errors.Add(new ValidationError("This  resource is no longer available"));
-            }
-            else if (_ressource.ReserveStatus == Types.ReserveStatus.Reserved)
-            {
-                if(_ressource.ReservingStudentID == studentID)
-                {
-                    Errors.Add(new ValidationError("This student already reserved it."));
+            //if (_ressource.Status == Types.ResourceStatus.NotAvailable)
+            //{
+            //    Errors.Add(new ValidationError("This  resource is no longer available"));
+            //}
+            //else if (_ressource.ReserveStatus == Types.ReserveStatus.Reserved)
+            //{
+            //    if(_ressource.ReservingStudentID == studentID)
+            //    {
+            //        Errors.Add(new ValidationError("This student already reserved it."));
 
-                }
-                else
-                {
-                    Errors.Add(new ValidationError("This  resource has already been reserved by another student"));
-                }
-            }
+            //    }
+            //    else
+            //    {
+            //        Errors.Add(new ValidationError("This  resource has already been reserved by another student"));
+            //    }
+            //}
 
-            if (student.Status == 0)
-            {
-                Errors.Add(new ValidationError("Student Inactive. Unable to borrow any resources"));
-            }
+            //if (student.Status == 0)
+            //{
+            //    Errors.Add(new ValidationError("Student Inactive. Unable to borrow any resources"));
+            //}
 
-            else if (student.BalanceDue > 0)
-            {
-                Errors.Add(new ValidationError("Unable to reserve any resources until the balance is paid in full"));
-            }
+            //else if (student.BalanceDue > 0)
+            //{
+            //    Errors.Add(new ValidationError("Unable to reserve any resources until the balance is paid in full"));
+            //}
 
-            if (Errors.Count() == 0)
-            {
-                ResourceRepository resourceRepository = new ResourceRepository();
+            //if (Errors.Count() == 0)
+            //{
+            //    ResourceRepository resourceRepository = new ResourceRepository();
 
-                return resourceRepository.UpdateReserveStatus(resourceID, studentID);
-            }
+            //    return resourceRepository.UpdateReserveStatus(resourceID, studentID);
+            //}
 
             return false;
         }

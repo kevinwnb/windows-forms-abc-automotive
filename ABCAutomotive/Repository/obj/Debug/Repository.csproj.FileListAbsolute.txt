@@ -22,6 +22,10 @@ C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-
 C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Repository\obj\Debug\Repository.csproj.CopyComplete
 C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Repository\obj\Debug\Repository.dll
 C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-abc-automotive-camillekevin\Deliverables\C1\ABCAutomotive - C1\Repository\obj\Debug\Repository.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\obj\Debug\Repository.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\obj\Debug\Repository.pdb
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\bin\Debug\Repository.dll
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\bin\Debug\Repository.pdb
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\bin\Debug\DAL.dll
@@ -30,8 +34,4 @@ C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\bin\Debug\DAL.pdb
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\bin\Debug\Model.pdb
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\bin\Debug\Types.pdb
-C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
-C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\obj\Debug\Repository.csproj.CopyComplete
-C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\obj\Debug\Repository.dll
-C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\Repository\obj\Debug\Repository.pdb

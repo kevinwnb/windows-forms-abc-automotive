@@ -105,13 +105,13 @@ namespace ABCAutomotive.UI.Pages
 
         private void PopulateStudentFields(Student student)
         {
-            txtFirstName.Text = student.FirstName;
-            txtLastName.Text = student.LastName;
-            txtProgramID.Text = student.ProgramID.ToString();
-            dtpStartDate.Value = student.StartDate;
-            dtpEndDate.Value = student.EndDate;
-            txtBalanceDue.Text = student.BalanceDue.ToString();
-            chkIsActive.Checked = Convert.ToBoolean(student.Status);
+            //txtFirstName.Text = student.FirstName;
+            //txtLastName.Text = student.LastName;
+            //txtProgramID.Text = student.ProgramID.ToString();
+            //dtpStartDate.Value = student.StartDate;
+            //dtpEndDate.Value = student.EndDate;
+            //txtBalanceDue.Text = student.BalanceDue.ToString();
+            //chkIsActive.Checked = Convert.ToBoolean(student.Status);
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -295,14 +295,14 @@ namespace ABCAutomotive.UI.Pages
         {
 
             
-            student.ID = Convert.ToInt32(_studentID);
-            student.FirstName = txtFirstName.Text;
-            student.LastName = txtLastName.Text;
-            student.BalanceDue = Convert.ToDecimal(txtBalanceDue.Text);
-            student.Status = (StudentStatus)Convert.ToInt32(chkIsActive.Checked);
-            student.ProgramID = Convert.ToInt32(txtProgramID.Text);
-            student.StartDate = dtpEndDate.Value;
-            student.EndDate = dtpEndDate.Value;
+            //student.ID = Convert.ToInt32(_studentID);
+            //student.FirstName = txtFirstName.Text;
+            //student.LastName = txtLastName.Text;
+            //student.BalanceDue = Convert.ToDecimal(txtBalanceDue.Text);
+            //student.Status = (StudentStatus)Convert.ToInt32(chkIsActive.Checked);
+            //student.ProgramID = Convert.ToInt32(txtProgramID.Text);
+            //student.StartDate = dtpEndDate.Value;
+            //student.EndDate = dtpEndDate.Value;
 
 
         }
@@ -311,13 +311,13 @@ namespace ABCAutomotive.UI.Pages
         {
 
 
-            student.FirstName = txtFirstName.Text;
-            student.LastName = txtLastName.Text;
-            student.BalanceDue = Convert.ToDecimal(txtBalanceDue.Text);
-            student.Status = (StudentStatus)Convert.ToInt32(chkIsActive.Checked);
-            student.ProgramID = Convert.ToInt32(txtProgramID.Text);
-            student.StartDate = dtpEndDate.Value;
-            student.EndDate = dtpEndDate.Value;
+            //student.FirstName = txtFirstName.Text;
+            //student.LastName = txtLastName.Text;
+            //student.BalanceDue = Convert.ToDecimal(txtBalanceDue.Text);
+            //student.Status = (StudentStatus)Convert.ToInt32(chkIsActive.Checked);
+            //student.ProgramID = Convert.ToInt32(txtProgramID.Text);
+            //student.StartDate = dtpEndDate.Value;
+            //student.EndDate = dtpEndDate.Value;
 
 
         }

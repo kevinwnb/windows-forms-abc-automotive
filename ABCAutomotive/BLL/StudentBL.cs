@@ -53,14 +53,15 @@ namespace BLL
 
         private bool IsValidID()
         {
-            string path = "[" + _student.StartDate.Year + "]" + "[0-9][0-9][0-9][0-9]";
-            Regex reg = new Regex(path);
+            //string path = "[" + _student.StartDate.Year + "]" + "[0-9][0-9][0-9][0-9]";
+            //Regex reg = new Regex(path);
 
-            if (!reg.IsMatch(_student.ID.ToString()))
-            {
-                Errors.Add(new ValidationError("The student ID must start with the student start date"));
-            }
-            return reg.IsMatch(_student.ID.ToString());
+            //if (!reg.IsMatch(_student.ID.ToString()))
+            //{
+            //    Errors.Add(new ValidationError("The student ID must start with the student start date"));
+            //}
+            //return reg.IsMatch(_student.ID.ToString());
+            return true;
         }
 
         private bool DoesNotHaveOverdue()
@@ -75,12 +76,12 @@ namespace BLL
 
         private bool IsAvtive()
         {
-            if (_student.Status == 0)
+            if (_student.Status == false)
             {
                 Errors.Add(new ValidationError("This student is not an active student."));
 
             }
-            return _student.Status == StudentStatus.Active;
+            return _student.Status == true;
         }
         private void Validate()
         {
