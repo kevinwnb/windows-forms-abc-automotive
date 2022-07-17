@@ -94,9 +94,9 @@ namespace BLL
         {
             //if (_ressource.Status == 2)
             //{
-                if (GetReservingStudentID(_ressource.ID) != string.Empty)
+                if (GetReservingStudentID(_ressource.ResourceID) != string.Empty)
                 {
-                    if (GetReservingStudentID(_ressource.ID) != studentID)
+                    if (GetReservingStudentID(_ressource.ResourceID) != studentID)
                     {
                         Errors.Add(new ValidationError("This student is not the one who reserve the ressource. He/She cannot borrow it for now."));
                         return false;
@@ -123,7 +123,7 @@ namespace BLL
 
         private bool IsNotAvailable()
         {
-            if (_ressource.Status == Types.ResourceStatus.NotAvailable)
+            if (_ressource.Status == "Not Available for Loan")
             {
                 Errors.Add(new ValidationError("This ressource is no longer available."));
                 return false;

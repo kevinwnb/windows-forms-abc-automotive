@@ -25,6 +25,16 @@ namespace BLL
             return loanDAL.GetStudent(studentId);
         }
 
+        public List<Loan> GetStudentLoans(int studentId)
+        {
+            return loanDAL.GetStudentLoans(studentId);
+        }
+
+        public Resource GetResourceById(int id)
+        {
+            return loanDAL.GetResourceById(id);
+        }
+
         ////Check Out
         //#region CheckOut
         ///// <summary>

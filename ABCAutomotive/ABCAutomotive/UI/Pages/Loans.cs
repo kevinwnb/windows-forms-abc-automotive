@@ -33,7 +33,7 @@ namespace ABCAutomotive.UI.Pages
             {
                 dgvStudents.AutoResizeColumns();
                 dgvLoans.AutoResizeColumns();
-                dgvRessourceToBorrow.AutoResizeColumns();
+                dgvResourceToBorrow.AutoResizeColumns();
             }
             catch (Exception ex)
             {
@@ -103,6 +103,7 @@ namespace ABCAutomotive.UI.Pages
             {
                 if (dgvStudents.CurrentRow != null)
                 {
+                    LoanBL loanBL = new LoanBL();
                     DataGridViewCellCollection cells = dgvStudents.CurrentRow.Cells;
                     txtStudentID.Text = cells["ID"].Value.ToString();
                     txtFirstName.Text = cells["FirstName"].Value.ToString();
@@ -111,7 +112,23 @@ namespace ABCAutomotive.UI.Pages
                     txtBalanceDue.Text = cells["BalanceDue"].Value.ToString();
                     txtStartDate.Text = Convert.ToDateTime(cells["StartDate"].Value).Date.ToString("d");
                     txtEndDate.Text = Convert.ToDateTime(cells["EndDate"].Value).Date.ToString("d");
-                    chkIsActive.Enabled = Convert.ToBoolean(cells["Status"].Value);
+                    chkIsActive.Checked = Convert.ToBoolean(cells["Status"].Value);
+
+                    dgvLoans.DataSource = loanBL.GetStudentLoans(Convert.ToInt32(cells["ID"].Value));
+                    dgvLoans.Columns["ID"].Visible = false;
+                    dgvLoans.Columns["StudentID"].Visible = false;
+                    dgvLoans.Columns["Status"].Visible = false;
+                    dgvLoans.Columns["CheckInDate"].Visible = false;
+                    dgvLoans.Columns["Price"].Visible = false;
+                    dgvLoans.Columns["ReserveStatus"].Visible = false;
+                    dgvLoans.Columns["DateRemoved"].Visible = false;
+                    dgvLoans.Columns["ReservingStudentID"].Visible = false;
+                    dgvLoans.Columns["ResourceID"].DisplayIndex = 0;
+                    dgvLoans.Columns["Title"].DisplayIndex = 1;
+                    dgvLoans.Columns["Type"].DisplayIndex = 2;
+                    dgvLoans.Columns["CheckOutDate"].DisplayIndex = 3;
+                    dgvLoans.Columns["ImagePath"].DisplayIndex = 4;
+                    dgvLoans.Columns["DueDate"].DisplayIndex = 5;
                 }
             }
             catch (Exception ex)
@@ -199,21 +216,34 @@ namespace ABCAutomotive.UI.Pages
             //}
         }
 
-        private void btnSearchRessource_Click(object sender, EventArgs e)
+        private void btnSearchResource_Click(object sender, EventArgs e)
         {
-            string errorMessage = ValidateForm(sender);
-
-            if (errorMessage == string.Empty)
+            try
             {
-                PopulateDgvRessource(Convert.ToInt32(txtRessourceID.Text));
-
-                int ressourceID = Convert.ToInt32(dgvRessourceToBorrow.Rows[0].Cells["ID"].Value.ToString()); ;
-                FillPictureBox(ressourceID, picBorrowRessource);
+                LoanBL loanBL = new LoanBL();
+                List<Resource> resources = new List<Resource>();
+                Resource resource = loanBL.GetResourceById(Convert.ToInt32(txtResourceID.Text));
+                resources.Add(resource);
+                dgvResourceToBorrow.DataSource = resources;
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show(errorMessage);
+                throw;
             }
+
+            //string errorMessage = ValidateForm(sender);
+
+            //if (errorMessage == string.Empty)
+            //{
+            //    PopulateDgvRessource(Convert.ToInt32(txtRessourceID.Text));
+
+            //    int ressourceID = Convert.ToInt32(dgvRessourceToBorrow.Rows[0].Cells["ID"].Value.ToString()); ;
+            //    FillPictureBox(ressourceID, picBorrowRessource);
+            //}
+            //else
+            //{
+            //    MessageBox.Show(errorMessage);
+            //}
 
         }
 
@@ -233,7 +263,7 @@ namespace ABCAutomotive.UI.Pages
 
 
 
-            grpRessourceToBorrow.Enabled = true;
+            grpResourceToBorrow.Enabled = true;
             label11.ResetText();
         }
 
@@ -257,10 +287,10 @@ namespace ABCAutomotive.UI.Pages
 
             List<Resource> ressources = new List<Resource>() { ressourceBL.GetRessourceDetails(id: parameter) };
 
-            dgvRessourceToBorrow.DataSource = ressources;
-            dgvRessourceToBorrow.Columns["DateRemoved"].Visible = false;
-            dgvRessourceToBorrow.Columns["Price"].Visible = false;
-            dgvRessourceToBorrow.Columns["ImagePath"].Visible = false;
+            dgvResourceToBorrow.DataSource = ressources;
+            dgvResourceToBorrow.Columns["DateRemoved"].Visible = false;
+            dgvResourceToBorrow.Columns["Price"].Visible = false;
+            dgvResourceToBorrow.Columns["ImagePath"].Visible = false;
         }
 
         private void FillPictureBox(int resourrceID, PictureBox pic)
@@ -275,7 +305,7 @@ namespace ABCAutomotive.UI.Pages
             }
         }
 
-        private Loan PopulateLoanObject(Resource ressource, string studentID)
+        private Loan PopulateLoanObject(Resource resource, string studentID)
         {
             Loan loan = new Loan();
 
@@ -290,11 +320,11 @@ namespace ABCAutomotive.UI.Pages
                 loan.DueDate = loan.CheckOutDate.AddDays(2);
             }
 
-            loan.RessourceID = ressource.ID;
+            loan.ResourceID = resource.ResourceID;
 
             loan.StudentID = studentID;
 
-            loan.Status = LoanStatus.OnLoan;
+            loan.Status = "On Loan";
 
             return loan;
         }
@@ -330,18 +360,18 @@ namespace ABCAutomotive.UI.Pages
 
             }
 
-            if (sender == btnSearchRessource)
+            if (sender == btnSearchResource)
             {
-                if (txtRessourceID.Text == string.Empty)
+                if (txtResourceID.Text == string.Empty)
                 {
                     errorMessage = "You must enter a ressource ID.";
                 }
-                else if (!int.TryParse(txtRessourceID.Text, out int ressourceID))
+                else if (!int.TryParse(txtResourceID.Text, out int ressourceID))
                 {
                     errorMessage = "Please enter a valid Ressource Id number.";
                 }
             }
-            if (sender == btnConfirm && dgvRessourceToBorrow.Rows.Count == 0)
+            if (sender == btnConfirm && dgvResourceToBorrow.Rows.Count == 0)
             {
 
                 errorMessage = "You must retrieve a ressource first.";
@@ -370,12 +400,12 @@ namespace ABCAutomotive.UI.Pages
 
             dgvLoans.DataSource = null;
 
-            txtRessourceID.ResetText();
+            txtResourceID.ResetText();
 
-            dgvRessourceToBorrow.DataSource = null;
+            dgvResourceToBorrow.DataSource = null;
 
             grpStudentInformations.Enabled = false;
-            grpRessourceToBorrow.Enabled = false;
+            grpResourceToBorrow.Enabled = false;
         }
 
         private void btnReset_Click(object sender, EventArgs e)

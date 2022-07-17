@@ -64,7 +64,7 @@ namespace Repository
             parameters.Add(new Parameter("@CheckInDate", loan.CheckInDate, 0, SqlDbType.DateTime));
             parameters.Add(new Parameter("@Status", loan.Status, 50, SqlDbType.Int));
             parameters.Add(new Parameter("@StudentID", loan.StudentID, 8, SqlDbType.Char));
-            parameters.Add(new Parameter("@RessourceID", loan.RessourceID, 0, SqlDbType.Int));
+            parameters.Add(new Parameter("@ResourceID", loan.ResourceID, 0, SqlDbType.Int));
 
             DataAccess db = new DataAccess();
             int retVal = db.ExecuteNonQuery("Insert_Loan", CommandType.StoredProcedure, parameters);
@@ -109,7 +109,7 @@ namespace Repository
             Loan loan = new Loan();
 
             loan.ID = PopulateProperty("ID", row, "integer");
-            loan.RessourceID = PopulateProperty("RessourceID", row, "integer");
+            loan.ResourceID = PopulateProperty("RessourceID", row, "integer");
             loan.CheckOutDate = PopulateProperty("CheckOutDate", row, "datetime");
             loan.DueDate = PopulateProperty("DueDate", row, "datetime");
             loan.CheckInDate = PopulateProperty("CheckInDate", row, "datetime");
@@ -192,7 +192,7 @@ namespace Repository
             {
                 List<Parameter> parms = new List<Parameter>()
                 {
-                    new Parameter("@ResourceID", loan.RessourceID, 0, SqlDbType.Int, ParameterDirection.Input),
+                    new Parameter("@ResourceID", loan.ResourceID, 0, SqlDbType.Int, ParameterDirection.Input),
                     new Parameter("@Status", loan.Status, 50, SqlDbType.Int, ParameterDirection.Input),
                     new Parameter("@CheckInDate", loan.CheckInDate, 0, SqlDbType.DateTime, ParameterDirection.Input)
                 };

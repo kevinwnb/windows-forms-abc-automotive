@@ -35,19 +35,19 @@ namespace Repository
             _ressource = ressource;
 
             List<Parameter> parms = new List<Parameter>();
-            parms.Add(new Parameter("@RessourceID", _ressource.ID, 0, SqlDbType.Int));
+            parms.Add(new Parameter("@RessourceID", _ressource.ResourceID, 0, SqlDbType.Int));
 
             DataAccess db = new DataAccess();
             int retVal = 0;
 
             if (IsAvailable())
             {
-                if(_ressource.ReserveStatus == ReserveStatus.Reserved)         
+                if(_ressource.ReserveStatus == "Reserved")         
                 {
-                    if (RetrieveReservingStudentID(_ressource.ID) == studentID)
+                    if (RetrieveReservingStudentID(_ressource.ResourceID) == studentID)
                     {
                         List<Parameter> parameters = new List<Parameter>();
-                        parameters.Add(new Parameter("@RessourceID", _ressource.ID, 0, SqlDbType.Int));
+                        parameters.Add(new Parameter("@RessourceID", _ressource.ResourceID, 0, SqlDbType.Int));
                         string sql = "UPDATE Ressource SET ReserveStatus = 0, ReservingStudentID = NULL WHERE ID = @RessourceID";
 
                         retVal = db.ExecuteNonQuery(sql, CommandType.Text, parameters);
@@ -103,19 +103,19 @@ namespace Repository
 
         private bool IsAvailable()
         {
-            return _ressource.Status == ResourceStatus.Available;
+            return _ressource.Status == "Available";
         }
 
         private bool IsOnLoan()
         {
-            return _ressource.Status == ResourceStatus.OnLoan;
+            return _ressource.Status == "On Loan";
         }
 
         private Resource PopulateRessource(DataRow row)
         {
             Resource ressource = new Resource();
 
-            ressource.ID = PopulateProperty("ID", row, "integer");
+            ressource.ResourceID = PopulateProperty("ID", row, "integer");
             ressource.Type = PopulateProperty("Type", row, "ResourceType");
             ressource.Price = PopulateProperty("Price", row, "decimal");
             ressource.Title = PopulateProperty("Title", row);
@@ -224,7 +224,7 @@ namespace Repository
             {
                 List<Parameter> parms = new List<Parameter>()
                 {
-                    new Parameter("@ResourceID", resource.ID, 0, SqlDbType.Int, ParameterDirection.Input),
+                    new Parameter("@ResourceID", resource.ResourceID, 0, SqlDbType.Int, ParameterDirection.Input),
                     new Parameter("@ResourceStatus", resource.Status, 50, SqlDbType.Int, ParameterDirection.Input),
                     new Parameter("@DateRemoved", resource.DateRemoved, 0, SqlDbType.DateTime, ParameterDirection.Input)
                 };

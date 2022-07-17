@@ -70,6 +70,7 @@ namespace ABCAutomotive
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.Hide();
             Login login = new Login();
             login.ShowDialog();
 

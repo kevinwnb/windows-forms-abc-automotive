@@ -59,7 +59,7 @@ namespace DAL
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["abc_automotive"].ConnectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("sp_get_student", con))
+                using (SqlCommand cmd = new SqlCommand("GetStudent", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -77,6 +77,72 @@ namespace DAL
                     student.TimeStamp = dr["TimeStamp"].ToString();
 
                     return student;
+                }
+            }
+        }
+
+        public Resource GetResourceById(int id)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["abc_automotive"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("GetResourceById", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@ResourceID", SqlDbType.VarChar).Value = id;
+
+                    con.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    dr.Read();
+                    Resource resource = new Resource();
+                    resource.Title = dr["Title"].ToString();
+                    resource.Type = dr["Type"].ToString();
+                    resource.Status = dr["Status"].ToString();
+                    resource.ReserveStatus = Convert.ToBoolean(dr["ReserveStatus"]) == true ? "Reserved" : "Not Reserved";
+                    dr.Close();
+
+                    return resource;
+                }
+            }
+        }
+
+        public List<Loan> GetStudentLoans(int studentId)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["abc_automotive"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("GetLoansByStudent", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@StudentID", SqlDbType.VarChar).Value = studentId;
+
+                    con.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    List<Loan> loans = new List<Loan>();
+
+                    try
+                    {
+                        while (dr.Read())
+                        {
+                            Loan loan = new Loan();
+                            loan.ResourceID = Convert.ToInt32(dr["ID"]);
+                            loan.Title = Convert.ToString(dr["Title"]);
+                            loan.Type = Convert.ToString(dr["Name"]);
+                            loan.ImagePath = Convert.ToString(dr["ImagePath"]);
+                            loan.CheckOutDate = Convert.ToDateTime(dr["CheckOutDate"]);
+                            loan.DueDate = Convert.ToDateTime(dr["DueDate"]);
+                            loans.Add(loan);
+                        }
+                    }
+                    finally
+                    {
+                        // Always call Close when done reading.
+                        dr.Close();
+                    }
+
+                    return loans;
                 }
             }
         }
