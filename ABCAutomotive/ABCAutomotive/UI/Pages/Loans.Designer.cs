@@ -37,7 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.grpResourceToBorrow = new System.Windows.Forms.GroupBox();
-            this.btnConfirm = new System.Windows.Forms.Button();
+            this.dgvAddedResources = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnAddToList = new System.Windows.Forms.Button();
             this.dgvResourceToBorrow = new System.Windows.Forms.DataGridView();
             this.picBorrowRessource = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,8 +72,10 @@
             this.txtStudentID = new System.Windows.Forms.TextBox();
             this.chkIsActive = new System.Windows.Forms.CheckBox();
             this.grpLoans = new System.Windows.Forms.GroupBox();
+            this.btnConfirm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoans)).BeginInit();
             this.grpResourceToBorrow.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddedResources)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResourceToBorrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBorrowRessource)).BeginInit();
             this.grpMatchingStudents.SuspendLayout();
@@ -117,7 +121,6 @@
             this.dgvLoans.RowTemplate.Height = 33;
             this.dgvLoans.Size = new System.Drawing.Size(413, 164);
             this.dgvLoans.TabIndex = 55;
-            this.dgvLoans.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoans_CellClick);
             // 
             // txtBalanceDue
             // 
@@ -179,6 +182,9 @@
             // grpResourceToBorrow
             // 
             this.grpResourceToBorrow.Controls.Add(this.btnConfirm);
+            this.grpResourceToBorrow.Controls.Add(this.dgvAddedResources);
+            this.grpResourceToBorrow.Controls.Add(this.label12);
+            this.grpResourceToBorrow.Controls.Add(this.btnAddToList);
             this.grpResourceToBorrow.Controls.Add(this.dgvResourceToBorrow);
             this.grpResourceToBorrow.Controls.Add(this.picBorrowRessource);
             this.grpResourceToBorrow.Controls.Add(this.label8);
@@ -190,22 +196,44 @@
             this.grpResourceToBorrow.Margin = new System.Windows.Forms.Padding(2);
             this.grpResourceToBorrow.Name = "grpResourceToBorrow";
             this.grpResourceToBorrow.Padding = new System.Windows.Forms.Padding(2);
-            this.grpResourceToBorrow.Size = new System.Drawing.Size(635, 236);
+            this.grpResourceToBorrow.Size = new System.Drawing.Size(635, 557);
             this.grpResourceToBorrow.TabIndex = 50;
             this.grpResourceToBorrow.TabStop = false;
             this.grpResourceToBorrow.Text = "Ressource To Borrow";
             // 
-            // btnConfirm
+            // dgvAddedResources
             // 
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Tai Le", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(18, 199);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(413, 25);
-            this.btnConfirm.TabIndex = 47;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.dgvAddedResources.AllowUserToAddRows = false;
+            this.dgvAddedResources.AllowUserToDeleteRows = false;
+            this.dgvAddedResources.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAddedResources.BackgroundColor = System.Drawing.Color.White;
+            this.dgvAddedResources.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAddedResources.Location = new System.Drawing.Point(18, 298);
+            this.dgvAddedResources.Name = "dgvAddedResources";
+            this.dgvAddedResources.ReadOnly = true;
+            this.dgvAddedResources.Size = new System.Drawing.Size(413, 159);
+            this.dgvAddedResources.TabIndex = 60;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(15, 277);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(113, 18);
+            this.label12.TabIndex = 59;
+            this.label12.Text = "Added Resources";
+            // 
+            // btnAddToList
+            // 
+            this.btnAddToList.Font = new System.Drawing.Font("Microsoft Tai Le", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddToList.Location = new System.Drawing.Point(127, 188);
+            this.btnAddToList.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddToList.Name = "btnAddToList";
+            this.btnAddToList.Size = new System.Drawing.Size(200, 48);
+            this.btnAddToList.TabIndex = 47;
+            this.btnAddToList.Text = "Add Resource";
+            this.btnAddToList.UseVisualStyleBackColor = false;
+            this.btnAddToList.Click += new System.EventHandler(this.btnAddToList_Click);
             // 
             // dgvResourceToBorrow
             // 
@@ -362,7 +390,6 @@
             this.btnReset.TabIndex = 51;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // label7
             // 
@@ -613,11 +640,21 @@
             this.grpLoans.TabStop = false;
             this.grpLoans.Text = "Loans";
             // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(127, 476);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(220, 67);
+            this.btnConfirm.TabIndex = 61;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
             // Loans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.grpResourceToBorrow);
             this.Controls.Add(this.grpMatchingStudents);
             this.Controls.Add(this.btnReset);
@@ -626,11 +663,12 @@
             this.Controls.Add(this.btnClose);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Loans";
-            this.Size = new System.Drawing.Size(1037, 779);
+            this.Size = new System.Drawing.Size(1037, 1092);
             this.Load += new System.EventHandler(this.Loans_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoans)).EndInit();
             this.grpResourceToBorrow.ResumeLayout(false);
             this.grpResourceToBorrow.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddedResources)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResourceToBorrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBorrowRessource)).EndInit();
             this.grpMatchingStudents.ResumeLayout(false);
@@ -656,8 +694,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.GroupBox grpResourceToBorrow;
-        private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.DataGridView dgvResourceToBorrow;
+        private System.Windows.Forms.Button btnAddToList;
         private System.Windows.Forms.PictureBox picBorrowRessource;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
@@ -689,5 +726,9 @@
         private System.Windows.Forms.TextBox txtStudentID;
         private System.Windows.Forms.CheckBox chkIsActive;
         private System.Windows.Forms.GroupBox grpLoans;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dgvAddedResources;
+        private System.Windows.Forms.DataGridView dgvResourceToBorrow;
+        private System.Windows.Forms.Button btnConfirm;
     }
 }

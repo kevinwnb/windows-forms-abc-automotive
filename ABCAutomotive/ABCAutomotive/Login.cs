@@ -30,26 +30,13 @@ namespace ABCAutomotive
         {
             LoginBL loginBL = new LoginBL();
 
-            Model.Login login = loginBL.GetLogin(txtUserName.Text, txtPassword.Text);
-
-            if(login.LoginUserName == null || login.Password == null)
+            if (loginBL.GetLogin(txtUserName.Text, txtPassword.Text) != null)
             {
-              lblErrorMessage.Text = "Invalid Password or Login User Name";
-              txtUserName.Focus();
-
+                DialogResult = DialogResult.OK;
             }
             else
             {
-                if(login.Password.Trim() == txtPassword.Text && login.LoginUserName.Trim() == txtUserName.Text)
-                {
-                    DialogResult = DialogResult.OK;
-                }
-                else
-                {
-                    lblErrorMessage.Text = "Invalid Password or Login User Name";
-                    txtUserName.Focus();
-
-                }
+                MessageBox.Show("Invalid credentials, please try again", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

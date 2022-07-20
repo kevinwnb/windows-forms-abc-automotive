@@ -79,7 +79,6 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // dgvStudentInfo
             // 
@@ -100,7 +99,6 @@
             this.dgvStudents.RowHeadersWidth = 51;
             this.dgvStudents.Size = new System.Drawing.Size(616, 155);
             this.dgvStudents.TabIndex = 3;
-            this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvStudents_CellClick);
             // 
             // label1
             // 
@@ -140,7 +138,6 @@
             this.btnConfirm.TabIndex = 6;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
             // 
             // rdoDebit
             // 
@@ -260,7 +257,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Payment";
             this.Size = new System.Drawing.Size(1121, 624);
-            this.Load += new System.EventHandler(this.Payment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.grpPayment.ResumeLayout(false);

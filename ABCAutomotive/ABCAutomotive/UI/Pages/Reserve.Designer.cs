@@ -97,7 +97,6 @@
             this.btnSearchRessource.TabIndex = 11;
             this.btnSearchRessource.Text = "Search";
             this.btnSearchRessource.UseVisualStyleBackColor = true;
-            this.btnSearchRessource.Click += new System.EventHandler(this.btnSearchResource_Click);
             // 
             // txtResourceID
             // 
@@ -162,7 +161,6 @@
             this.dgvStudents.RowTemplate.Height = 33;
             this.dgvStudents.Size = new System.Drawing.Size(749, 240);
             this.dgvStudents.TabIndex = 62;
-            this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellClick);
             // 
             // rdoPartialLastName
             // 
@@ -209,7 +207,6 @@
             this.btnSearchStudent.TabIndex = 59;
             this.btnSearchStudent.Text = "Search";
             this.btnSearchStudent.UseVisualStyleBackColor = true;
-            this.btnSearchStudent.Click += new System.EventHandler(this.btnSearchStudent_Click);
             // 
             // label11
             // 
@@ -449,7 +446,6 @@
             this.btnReserve.TabIndex = 16;
             this.btnReserve.Text = "Reserve";
             this.btnReserve.UseVisualStyleBackColor = true;
-            this.btnReserve.Click += new System.EventHandler(this.btnReserve_Click);
             // 
             // Reserve
             // 

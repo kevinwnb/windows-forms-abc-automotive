@@ -117,7 +117,6 @@
             this.rdoDeleteStudent.TabStop = true;
             this.rdoDeleteStudent.Text = "Delete Student";
             this.rdoDeleteStudent.UseVisualStyleBackColor = true;
-            this.rdoDeleteStudent.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // rdoEditStudent
             // 
@@ -131,7 +130,6 @@
             this.rdoEditStudent.TabStop = true;
             this.rdoEditStudent.Text = "Edit Student";
             this.rdoEditStudent.UseVisualStyleBackColor = true;
-            this.rdoEditStudent.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // rdoAddStudent
             // 
@@ -145,7 +143,6 @@
             this.rdoAddStudent.TabStop = true;
             this.rdoAddStudent.Text = "Add Student";
             this.rdoAddStudent.UseVisualStyleBackColor = true;
-            this.rdoAddStudent.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // btnConfirm
             // 
@@ -157,7 +154,6 @@
             this.btnConfirm.TabIndex = 79;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // grpMatchingStudents
             // 
@@ -224,7 +220,6 @@
             this.dgvStudents.RowTemplate.Height = 33;
             this.dgvStudents.Size = new System.Drawing.Size(392, 278);
             this.dgvStudents.TabIndex = 48;
-            this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellClick);
             // 
             // grpSearch
             // 
@@ -281,7 +276,6 @@
             this.btnSearchStudent.TabIndex = 2;
             this.btnSearchStudent.Text = "Search";
             this.btnSearchStudent.UseVisualStyleBackColor = true;
-            this.btnSearchStudent.Click += new System.EventHandler(this.btnSearchStudent_Click);
             // 
             // grpStudentInformation
             // 
@@ -458,7 +452,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditStudent";
             this.Size = new System.Drawing.Size(1235, 886);
-            this.Load += new System.EventHandler(this.EditStudent_Load);
             this.pnlChoice.ResumeLayout(false);
             this.pnlChoice.PerformLayout();
             this.grpMatchingStudents.ResumeLayout(false);

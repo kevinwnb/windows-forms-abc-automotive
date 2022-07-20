@@ -29,11 +29,9 @@ C:\Users\Kevin\Desktop\NBCC_2019_Fall_Term\N - tier development\project\project-
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\BLL.dll
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\BLL.pdb
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Model.dll
-C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Repository.dll
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Types.dll
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\DAL.dll
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Model.pdb
-C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Repository.pdb
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\Types.pdb
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\bin\Debug\DAL.pdb
 C:\Users\kevin\OneDrive\Documents\GitHub\ABC-Automotive\ABCAutomotive\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache

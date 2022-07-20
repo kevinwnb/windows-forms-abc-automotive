@@ -22,8 +22,9 @@ namespace Model
 
         public decimal Price { get; set; }
 
+        [DisplayName("Resource Status")]
         public string Status { get; set; }
-
+        [DisplayName("Reserve Status")]
         public string ReserveStatus { get; set; }
         
         public DateTime? DateRemoved { get; set; }

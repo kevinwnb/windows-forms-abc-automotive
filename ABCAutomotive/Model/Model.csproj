@@ -42,23 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Borrowing.cs" />
-    <Compile Include="Entities\Login.cs" />
-    <Compile Include="Entities\Loan.cs" />
-    <Compile Include="Entities\Payment.cs" />
-    <Compile Include="Entities\Program.cs" />
-    <Compile Include="Entities\Resource.cs" />
-    <Compile Include="Entities\Student.cs" />
-    <Compile Include="Entities\StudentLoanInfo.cs" />
-    <Compile Include="Entities\StudentPayment.cs" />
-    <Compile Include="Lists\Lookups.cs" />
+    <Compile Include="Borrowing.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="Loan.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Validation\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Entities\ClassDiagram1.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Types\Types.csproj">

@@ -96,6 +96,7 @@ namespace DAL
 
                     dr.Read();
                     Resource resource = new Resource();
+                    resource.ResourceID = Convert.ToInt32(dr["ID"]);
                     resource.Title = dr["Title"].ToString();
                     resource.Type = dr["Type"].ToString();
                     resource.Status = dr["Status"].ToString();
@@ -143,6 +144,42 @@ namespace DAL
                     }
 
                     return loans;
+                }
+            }
+        }
+
+        public bool ChangeResourceStatus(string status)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["abc_automotive"].ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("GetResourceById", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    int statusId = 0;
+                    switch (status)
+                    {
+                        case "OnLoan":
+                            statusId = (int)Types.ResourceStatus.OnLoan;
+                                break;
+                        case "Available":
+                            statusId = (int)Types.ResourceStatus.Available;
+                            break;
+                        case "NotAvailable":
+                            statusId = (int)Types.ResourceStatus.NotAvailable;
+                            break;
+                    }
+
+                    cmd.Parameters.Add("@StatusID", SqlDbType.Int).Value = statusId;
+
+                    con.Open();
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    cmd.Dispose();
+                    con.Close();
+
+                    return rowsAffected > 0;
                 }
             }
         }

@@ -1,5 +1,5 @@
-﻿using Model;
-using Repository;
+﻿using DAL;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,31 +13,8 @@ namespace BLL
     {
         public Login GetLogin(string userName, string password)
         {
-            Login login = new Login();
-
-            LoginRepository loginRepository = new LoginRepository();
-
-            DataTable dt = loginRepository.RetrieveLogins(userName, password);
-
-            if(dt.Rows.Count !=0)
-            {
-                login = PopulateLogin(dt.Rows[0]);
-            }
-
-            return login;
+            LoginDAL logindal = new LoginDAL();
+            return logindal.GetLogin(userName, password);
         }
-
-        private Login PopulateLogin(DataRow row)
-        {
-            Login login = new Login();
-
-            login.ID = Convert.ToInt32(row["ID"]);
-            login.LoginUserName = row["LoginUserName"].ToString();
-            login.Password = row["Password"].ToString();
-            login.DepartementHead = Convert.ToInt32(row["DepartementHead"]);
-
-            return login;
-        }
-
     }
 }
