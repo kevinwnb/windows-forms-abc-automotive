@@ -37,7 +37,7 @@ namespace BLL
 
         public bool CreateLoans(List<Loan> loans)
         {
-
+            return true;
         }
     }
 }
